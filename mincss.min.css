@@ -4,10 +4,382 @@
    (©) Nguyen Nam 2017 
 
    	1. = RESET
-	2. = TYPOGRAPHY
-	3. = ALIGN
-	4. = GRID
+   	2. = TYPOGRAPHY
+	3. = ELEMENT
+	4. = ALIGN
+	5. = GRID
 
    =============== */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);body,html{box-sizing:border-box;height:100%;width:100%;margin:0;padding:0;left:0;top:0;font-size:100%;font-family:Roboto,Helvetica,sans-serif;color:#1d1e23;line-height:1.5}*,::after,::before{box-sizing:inherit}@-ms-viewport{width:device-width}article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}[role=button],a,area,button,input:not([type=range]),label,select,summary,textarea{-ms-touch-action:manipulation;touch-action:manipulation}[type=submit],button{padding:1.1rem 3.5rem;margin:1rem 0;background:#111;color:#f5f5f5;border-radius:2px;border:none;font-size:1.3rem;transition:all .2s ease}[type=submit].outline,button.outline{padding:1.1rem 3.5rem;background:0 0;color:#111;border:1.5px solid #111}[type=submit]:hover,button:hover{background:#222}[type=submit].outline:hover,button.outline:hover{background:0 0;border:1.5px solid #444;color:#444}[type=submit]:focus,button:focus{outline:0}[type=submit]:active,button:active{transform:scale(.99)}input[type=email],input[type=file],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],select,textarea,textarea[type=text]{margin:1rem 0;width:100%;max-width:100%;border-radius:2px;border:1px solid #a4a4a4;font-size:1.3rem;transition:all .2s ease}input[type=email]:hover,input[type=file],input[type=number]:hover,input[type=password]:hover,input[type=search]:hover,input[type=tel],input[type=text]:hover,select:hover,textarea:hover,textarea[type=text]:hover{border:1px solid #b51010}input[type=email]:focus,input[type=file],input[type=number],input[type=password]:focus,input[type=search]:focus,input[type=tel],input[type=text]:focus,select:focus textarea:focus,textarea[type=text]:focus{outline:0;border:1px solid #b51010}input[type=email],input[type=file],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],select{padding:1.1rem}textarea,textarea[type=text]{height:10rem;padding:14px 20px}h1{font-size:2em}h2{font-size:1.5em}h3{font-size:1.17em}h4{margin:1.12em}.center,.container{margin-left:auto;margin-right:auto}h5{font-size:.83em}h6{font-size:.75em}b,h1,h2,h3,h4,h5,h6,strong{font-weight:bolder}.font-light,p{font-weight:300}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5em}p{font-size:1.125em;line-height:1.8}.font-regular{font-weight:400}.font-heavy{font-weight:700}.left{text-align:left}.right{text-align:right}.center{text-align:center}.justify{text-align:justify}.vertical-align{display:flex;align-items:center}.horizontal-align{display:flex;justify-content:center}.full-screen{width:100%;min-height:100vh}.text-center{text-align:center}.container{width:90%}.row{position:relative;width:100%}.row [class^=col]{float:left;margin:.5em 2%;min-height:.125em}.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9{width:96%}.col-1-s{width:4.33%}.col-2-s{width:12.66%}.col-3-s{width:21%}.col-4-s{width:29.33%}.col-5-s{width:37.66%}.col-6-s{width:46%}.col-7-s{width:54.33%}.col-8-s{width:62.66%}.col-9-s{width:71%}.col-10-s{width:79.33%}.col-11-s{width:87.66%}.col-12-s{width:96%}.row::after{content:"";display:table;clear:both}.hidden-s{display:none}@media only screen and (min-width:540px){.container{width:80%}}@media only screen and (min-width:720px){.col-1{width:4.33%}.col-2{width:12.66%}.col-3{width:21%}.col-4{width:29.33%}.col-5{width:37.66%}.col-6{width:46%}.col-7{width:54.33%}.col-8{width:62.66%}.col-9{width:71%}.col-10{width:79.33%}.col-11{width:87.66%}.col-12{width:96%}.hidden-s{display:block}}@media only screen and (min-width:960px){.container{width:75%;max-width:60em}}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+body,
+html {
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+	font-size: 100%;
+	font-family: Roboto, Helvetica, sans-serif;
+	color: #1d1e23;
+	line-height: 1.5
+}
+
+/* RESET
+   ============================= */
+
+*,
+::after,
+::before {
+	box-sizing: inherit
+}
+@-ms-viewport {
+	width: device-width
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block
+}
+[role=button],
+a,
+area,
+button,
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation
+}
+
+/* ELEMENT
+   ============================= */
+
+[type=submit],
+button {
+	padding: 1.1rem 3.5rem;
+	margin: 1rem 0;
+	background: #111;
+	color: #f5f5f5;
+	border-radius: 2px;
+	border: none;
+	font-size: 1.3rem;
+	transition: all .2s ease
+}
+[type=submit].outline,
+button.outline {
+	padding: 1.1rem 3.5rem;
+	background: 0 0;
+	color: #111;
+	border: 1.5px solid #111
+}
+[type=submit]:hover,
+button:hover {
+	background: #222
+}
+[type=submit].outline:hover,
+button.outline:hover {
+	background: 0 0;
+	border: 1.5px solid #444;
+	color: #444
+}
+[type=submit]:focus,
+button:focus {
+	outline: 0
+}
+[type=submit]:active,
+button:active {
+	transform: scale(.99)
+}
+input[type=email],
+input[type=file],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+select,
+textarea,
+textarea[type=text] {
+	margin: 1rem 0;
+	width: 100%;
+	max-width: 100%;
+	border-radius: 2px;
+	border: 1px solid #a4a4a4;
+	font-size: 1.3rem;
+	transition: all .2s ease
+}
+input[type=email]:hover,
+input[type=file],
+input[type=number]:hover,
+input[type=password]:hover,
+input[type=search]:hover,
+input[type=tel],
+input[type=text]:hover,
+select:hover,
+textarea:hover,
+textarea[type=text]:hover {
+	border: 1px solid #b51010
+}
+input[type=email]:focus,
+input[type=file],
+input[type=number],
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel],
+input[type=text]:focus,
+select:focus textarea:focus,
+textarea[type=text]:focus {
+	outline: 0;
+	border: 1px solid #b51010
+}
+input[type=email],
+input[type=file],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+select {
+	padding: 1.1rem
+}
+textarea,
+textarea[type=text] {
+	height: 10rem;
+	padding: 14px 20px
+}
+
+/* TYPOGRAPHY
+   ============================= */
+
+h1 {
+	font-size: 2em
+}
+h2 {
+	font-size: 1.5em
+}
+h3 {
+	font-size: 1.17em
+}
+h4 {
+	margin: 1.12em
+}
+.center,
+.container {
+	margin-left: auto;
+	margin-right: auto
+}
+h5 {
+	font-size: .83em
+}
+h6 {
+	font-size: .75em
+}
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	font-weight: bolder
+}
+.font-light,
+p {
+	font-weight: 300
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: .5em
+}
+p {
+	font-size: 1.125em;
+	line-height: 1.8
+}
+.font-thin {
+	font-weight: 300
+}
+.font-regular {
+	font-weight: 400
+}
+.font-heavy {
+	font-weight: 700
+}
+
+
+/* ALIGN
+   ============================= */
+
+.left {
+	text-align: left
+}
+.right {
+	text-align: right
+}
+.center {
+	text-align: center
+}
+.justify {
+	text-align: justify
+}
+.vertical-align {
+	display: flex;
+	align-items: center
+}
+.horizontal-align {
+	display: flex;
+	justify-content: center
+}
+.full-screen {
+	width: 100%;
+	min-height: 100vh
+}
+.text-center {
+	text-align: center
+}
+.container {
+	width: 90%
+}
+.row {
+	position: relative;
+	width: 100%
+}
+.row [class^=col] {
+	float: left;
+	margin: .5em 2%;
+	min-height: .125em
+}
+
+/* GRID
+   ============================= */
+
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+	width: 96%
+}
+.col-1-s {
+	width: 4.33%
+}
+.col-2-s {
+	width: 12.66%
+}
+.col-3-s {
+	width: 21%
+}
+.col-4-s {
+	width: 29.33%
+}
+.col-5-s {
+	width: 37.66%
+}
+.col-6-s {
+	width: 46%
+}
+.col-7-s {
+	width: 54.33%
+}
+.col-8-s {
+	width: 62.66%
+}
+.col-9-s {
+	width: 71%
+}
+.col-10-s {
+	width: 79.33%
+}
+.col-11-s {
+	width: 87.66%
+}
+.col-12-s {
+	width: 96%
+}
+.row::after {
+	content: "";
+	display: table;
+	clear: both
+}
+.hidden-s {
+	display: none
+}
+
+
+@media only screen and (min-width:540px) {
+	.container {
+		width: 80%
+	}
+}
+@media only screen and (min-width:720px) {
+	.col-1 {
+		width: 4.33%
+	}
+	.col-2 {
+		width: 12.66%
+	}
+	.col-3 {
+		width: 21%
+	}
+	.col-4 {
+		width: 29.33%
+	}
+	.col-5 {
+		width: 37.66%
+	}
+	.col-6 {
+		width: 46%
+	}
+	.col-7 {
+		width: 54.33%
+	}
+	.col-8 {
+		width: 62.66%
+	}
+	.col-9 {
+		width: 71%
+	}
+	.col-10 {
+		width: 79.33%
+	}
+	.col-11 {
+		width: 87.66%
+	}
+	.col-12 {
+		width: 96%
+	}
+	.hidden-s {
+		display: block
+	}
+}
+@media only screen and (min-width:960px) {
+	.container {
+		width: 75%;
+		max-width: 60em
+	}
+}
