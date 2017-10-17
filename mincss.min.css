@@ -1,0 +1,261 @@
+/* ===============
+
+   MinCSS
+   (©) Nguyen Nam 2017 
+
+   	1. = RESET
+	2. = TYPOGRAPHY
+	3. = ALIGN
+	4. = GRID
+
+   =============== */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+/* ==[ RESET ]== */
+
+html,
+body {
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+	font-size: 100%;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	color: #1d1e23;
+	line-height: 1.5;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+@-ms-viewport {
+	width: device-width;
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+}
+a,
+area,
+button,
+[role="button"],
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+
+/* ==[ TYPOGRAPHY ]== */
+
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.17em;
+}
+h4 {
+	margin: 1.12em;
+}
+h5 {
+	font-size: .83em;
+}
+h6 {
+	font-size: .75em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+	font-weight: bolder;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+p {
+	font-size: 1.125em;
+	font-weight: 300;
+	line-height: 1.8;
+}
+.font-light {
+	font-weight: 300;
+}
+.font-regular {
+	font-weight: 400;
+}
+.font-heavy {
+	font-weight: 700;
+}
+
+/* ==[ ALIGN ]== */
+
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.justify {
+	text-align: justify;
+}
+
+/* ==[ GRID ]== */
+
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.row {
+	position: relative;
+	width: 100%;
+}
+.row [class^="col"] {
+	float: left;
+	margin: 0.5em 2%;
+	min-height: 0.125em;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+	width: 96%;
+}
+.col-1-s {
+	width: 4.33%;
+}
+.col-2-s {
+	width: 12.66%;
+}
+.col-3-s {
+	width: 21%;
+}
+.col-4-s {
+	width: 29.33%;
+}
+.col-5-s {
+	width: 37.66%;
+}
+.col-6-s {
+	width: 46%;
+}
+.col-7-s {
+	width: 54.33%;
+}
+.col-8-s {
+	width: 62.66%;
+}
+.col-9-s {
+	width: 71%;
+}
+.col-10-s {
+	width: 79.33%;
+}
+.col-11-s {
+	width: 87.66%;
+}
+.col-12-s {
+	width: 96%;
+}
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden-s {
+	display: none;
+}
+@media only screen and (min-width: 540px) {
+	.container {
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 720px) {
+	.col-1 {
+		width: 4.33%;
+	}
+	.col-2 {
+		width: 12.66%;
+	}
+	.col-3 {
+		width: 21%;
+	}
+	.col-4 {
+		width: 29.33%;
+	}
+	.col-5 {
+		width: 37.66%;
+	}
+	.col-6 {
+		width: 46%;
+	}
+	.col-7 {
+		width: 54.33%;
+	}
+	.col-8 {
+		width: 62.66%;
+	}
+	.col-9 {
+		width: 71%;
+	}
+	.col-10 {
+		width: 79.33%;
+	}
+	.col-11 {
+		width: 87.66%;
+	}
+	.col-12 {
+		width: 96%;
+	}
+	.hidden-s {
+		display: block;
+	}
+}
+@media only screen and (min-width: 960px) {
+	.container {
+		width: 75%;
+		max-width: 60em;
+	}
+}
