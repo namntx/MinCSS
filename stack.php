@@ -1,10 +1,17 @@
 <?php
-			
-            $new=get_records("tbl_item","status=1 AND idshop='{$idshop}' AND special","id DESC", $startRow.",".$pageSize, " ");
-            $dem=1;
-            while($row_new=mysql_fetch_assoc($new)){
-            ?>     
-            <div class="col-3">
+
+$new = get_records("tbl_item", "status=1 AND idshop='{$idshop}' AND special", "id DESC", $startRow . "," . $pageSize, " ");
+$dem = 1;
+$x = 0;
+$xcount =0;
+$count = count($new);
+while ($row_new = mysql_fetch_assoc($new)) {
+    $x++;
+    $xcount++;
+    if ($x == 4) { ?>
+        <div class="row">
+    <?php } ?>
+    <div class="col-3">
                 	<div>
                         <table cellpadding="0" cellspacing="0">
                             <tr>
@@ -68,4 +75,11 @@
                         ?>
                     </h4>  
                 </div>
-            <?php } ?>   
+    <?php if ($x == 4 || $x == $count) { ?>
+        </div>
+        <?php
+        $x = 0;
+    }
+}
+
+?>
